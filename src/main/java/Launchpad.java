@@ -3,9 +3,9 @@ import de.oc.hg.dojo.rocketscience.rocket.Rocket;
 public class Launchpad {
 
 	public static void main(String[] args) {
-		iteration1();
+//		iteration1();
 //		iteration2();
-//		iteration3();
+		iteration3();
 	}
 	
 	private static void iteration1() {
