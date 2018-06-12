@@ -19,21 +19,35 @@ public class Launchpad {
 	}
 	
 	private static void iteration3() {
-		String rocket = new Rocket().createRockets("Hello");
+		String input = "Hello THM";
+		String rocket = new Rocket().createRockets(input);
 		System.out.print(rocket);
+		
+		
 		for(int i=0; i < 100000; i++) {
 			if(i%2 == 0) {
-				System.out.print("\r VvV");
+				String waves = createWaves(input, "VvV ");
+				System.out.print("\r" + waves);
 			} else {
-				System.out.print("\r vVv");
+				String waves = createWaves(input, "vVv ");
+				System.out.print("\r" + waves);
 			}
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}		
+	}
+
+	private static String createWaves(String input, String style) {
+		String[] strings = input.split(" ");
+		StringBuilder waves = new StringBuilder();
+		for (String string : strings) {
+			waves.append(" ").append(style);
+		}
+		
+		return waves.toString();
 	}
 
 }
