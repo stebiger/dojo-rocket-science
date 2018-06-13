@@ -1,30 +1,32 @@
-import de.oc.hg.dojo.rocketscience.rocket.Rocket;
+import de.oc.hg.dojo.rocketscience.rocket.RocketFactory;
 
 public class Launchpad {
 
 	public static void main(String[] args) {
-//		iteration1();
-//		iteration2();
+		iteration1();
+		System.out.println();
+		iteration2();
+		System.out.println();
 		iteration3();
 	}
 	
 	private static void iteration1() {
-		String rocket = new Rocket().createRockets("Hello");
-		System.out.print(rocket);
+		String rocket = new RocketFactory().createRockets("Hello");
+		System.out.println(rocket);
 	}
 	
 	private static void iteration2() {
-		String rockets = new Rocket().createRockets("Das Pferd frisst keinen Gurkensalat");
+		String rockets = new RocketFactory().createRockets("Gurkensalat Das Pferd frisst keinen");
 		System.out.println(rockets);
 	}
 	
 	private static void iteration3() {
 		String input = "Hello THM";
-		String rocket = new Rocket().createRockets(input);
+		String rocket = new RocketFactory().createRockets(input);
 		System.out.print(rocket);
 		
 		
-		for(int i=0; i < 100000; i++) {
+		for(int i=0; i < Integer.MAX_VALUE; i++) {
 			if(i%2 == 0) {
 				String waves = createWaves(input, "VvV ");
 				System.out.print("\r" + waves);
